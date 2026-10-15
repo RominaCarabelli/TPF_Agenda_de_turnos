@@ -1,16 +1,63 @@
-# React + Vite
+# Agenda de turnos
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web responsive para gestionar los turnos de un emprendimiento de servicios de pestañas.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Mumi Lashes es una agenda que permite registrar y organizar los turnos de las clientas, con una interfaz diseñada para acompañar la identidad visual del emprendimiento.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Registrar nuevos turnos con los datos de la clienta, el servicio, la fecha y el horario.
+- Guardar información de contacto, comentarios y estado de la seña.
+- Consultar el listado de turnos y ver sus detalles.
+- Filtrar los turnos por estado.
+- Modificar los datos de los turnos con estado distinto a completado.
+- Cambiar el estado de cada turno, excepto los que tienen estado completado.
+- Eliminar turnos con una confirmación previa.
+- Guardar los turnos en el almacenamiento local del navegador (`localStorage`).
+- Adaptar la interfaz a distintos tamaños de pantalla.
 
-## Expanding the Oxlint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React
+- JavaScript
+- Vite
+- CSS
+- Font Awesome
+
+## Instalación y ejecución
+
+Para ejecutar el proyecto localmente, necesitás tener Node.js y npm instalados.
+
+1. Cloná el repositorio:
+
+   ```bash
+   git clone https://github.com/RominaCarabelli/TPF_Agenda_de_turnos.git
+   ```
+
+2. Ingresá a la carpeta del proyecto:
+
+   ```bash
+   cd TPF_Agenda_de_turnos
+   ```
+
+3. Instalá las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Iniciá el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+## Demo
+
+[Ver Agenda de turnos](https://tpf-agenda-de-turnos.vercel.app)
+
+## Almacenamiento
+
+Los turnos se guardan en el almacenamiento local del navegador. Por este motivo, los datos no se comparten automáticamente entre distintos navegadores o dispositivos.

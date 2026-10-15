@@ -121,33 +121,34 @@ function App() {
       })
     );
   };
+  
   const deleteAppointment = (id) => {
-  const appointment = appointments.find((item) => item.id === id);
+    const appointment = appointments.find((item) => item.id === id);
 
-  if (!appointment) return;
+    if (!appointment) return;
 
-  setAppointmentToDelete(appointment);
-};
+    setAppointmentToDelete(appointment);
+  };
 
-const confirmDeleteAppointment = () => {
-  if (!appointmentToDelete) return;
+  const confirmDeleteAppointment = () => {
+    if (!appointmentToDelete) return;
 
-  const id = appointmentToDelete.id;
+    const id = appointmentToDelete.id;
 
-  setAppointments((previousAppointments) =>
-    previousAppointments.filter((item) => item.id !== id)
-  );
+    setAppointments((previousAppointments) =>
+      previousAppointments.filter((item) => item.id !== id)
+    );
 
-  setExpandedIds((previousIds) =>
-    previousIds.filter((itemId) => itemId !== id)
-  );
+    setExpandedIds((previousIds) =>
+      previousIds.filter((itemId) => itemId !== id)
+    );
 
-  if (editingId === id) {
-    cancelEditing();
-  }
+    if (editingId === id) {
+      cancelEditing();
+    }
 
-  setAppointmentToDelete(null);
-};
+    setAppointmentToDelete(null);
+  };
 
   const toggleDetails = (id) => {
     setExpandedIds((previousIds) =>
